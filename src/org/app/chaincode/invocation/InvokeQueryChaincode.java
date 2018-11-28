@@ -94,7 +94,6 @@ public class InvokeQueryChaincode {
 			}
 
 			Thread.sleep(10000);
-			String[] args1 = {"CAR1"};
 			Collection<ProposalResponse>  responses1Query = channelClient.queryByChainCode("fabcar", "query", new String[]{"b"});
 			for (ProposalResponse pres : responses1Query) {
 				String stringResponse = new String(pres.getChaincodeActionResponsePayload());

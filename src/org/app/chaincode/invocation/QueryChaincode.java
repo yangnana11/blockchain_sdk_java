@@ -66,7 +66,7 @@ public class QueryChaincode {
 			channel.addOrderer(orderer);
 			channel.initialize();
 
-			Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, "Querying for all cars ...");
+			Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, "Query a");
 			Collection<ProposalResponse>  responsesQuery = channelClient.queryByChainCode("fabcar", "query", new String[]{"a"});
 			for (ProposalResponse pres : responsesQuery) {
 				String stringResponse = new String(pres.getChaincodeActionResponsePayload());
@@ -74,8 +74,7 @@ public class QueryChaincode {
 			}
 
 			Thread.sleep(10000);
-			String[] args1 = {"CAR1"};
-			Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, "Querying for a car - " + args1[0]);
+			Logger.getLogger(QueryChaincode.class.getName()).log(Level.INFO, "Query b ");
 			
 			Collection<ProposalResponse>  responses1Query = channelClient.queryByChainCode("fabcar", "query", new String[]{"b"});
 			for (ProposalResponse pres : responses1Query) {
