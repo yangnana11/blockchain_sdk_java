@@ -1,5 +1,7 @@
 package org.app.config;
 
+import org.hyperledger.fabric.sdk.TransactionRequest.Type;
+
 import java.io.File;
 
 public class Config {
@@ -62,9 +64,11 @@ public class Config {
 	
 	public static final String CHAINCODE_1_NAME = "fabcar";
 	
-	public static final String CHAINCODE_1_PATH = "github.com/fabcar";
+	public static final String CHAINCODE_1_PATH = "chaincode";
 	
 	public static final String CHAINCODE_1_VERSION = "1";
+
+	public static final Type CHAIN_CODE_LANG = Type.JAVA;
 
 
 }
